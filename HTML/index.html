@@ -4,15 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Orlando Moya</title>
+    <title>Document</title>
     <style>
-      html,
+        *{
+            box-sizing: border-box;
+            margin:0;
+            padding:0;
+        }
       body {
         overflow-x: hidden;
         margin: 0;
-        padding: 0;
       }
-
+      @font-face{
+    font-family: "TitilliumWeb-Light";
+    src: url("fonts/TitilliumWeb-Light.ttf")
+}
+@font-face{
+    font-family:"TitilliumWeb-SemiBold";
+    src: url("fonts/TitilliumWeb-SemiBold.ttf")
+}
       ul {
         position: fixed;
         width: 100%;
@@ -23,216 +33,355 @@
         background-color: white;
         z-index: +1;
       }
-
       li {
         float: right;
       }
-
       li a {
         display: block;
-        color: #222629;
+        color: black;
         font-size: 22px;
-        font-weight: bold;
+        font-weight: 400;
         font-family: sans-serif;
         text-align: center;
-        padding: 22px 16px;
+        padding: 14px;
         text-decoration: none;
       }
-
+      a.square-links{
+        text-decoration: none;
+        font-family: TitilliumWeb-SemiBold; 
+      }
       li .links:hover {
-        background-color: #11524c;
+        background-color: seagreen;
+      }
+      .heading-font{
+        color: seagreen;
+          padding: 20px;
+          font-size: 40px;
+      }
+    
+      .bio-text{
+          color: black;
+          font-family: TitilliumWeb-Light ;
+          font-size: 18px;
+      }
+      .color-rectangle {
+        width: auto;
+        height: 720px;
+        background-color: bisque;
+        margin: 0;
+        padding: 0;
+      }
+      .page {
+        margin-left: 20%;
+        margin-right: 20%;
+      }
+      .img-orlando {
+        display: inline;
+        height: 300px;
+        width: auto;
+        border-radius: 50%;
+        float: right;
+      }
+      .bio {
+        display: inline;
+      }
+      .center {
+        margin: auto;
+        width: 50%;
+      }
+      .center-text{
+          text-align: center;
+      }
+      .center-text-vertically{
+          padding: 400px;
+      }
+      .background-img{
+        background-image: url("images/pattern.png");
+        background-repeat: repeat-y;
+      }
+      .background-img2{
+        background-image: url("images/pattern2.png");
+        background-repeat: repeat-y;
+      }
+      .pbox{
+        margin-top: 0px;
+        width: auto;
+        height: auto;
+        background-color: whitesmoke;
+        align-items: center;
+      }
+      .center2{
+        display:flex;
+        justify-content:center;
+      }
+      .radial-out {
+        overflow: hidden;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -moz-osx-font-smoothing: grayscale;
+        position: relative;
+        -webkit-transition: color 300ms;
+        transition: color 300ms;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+      }
+      .link-project:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: seagreen;
+        border-radius: 100%;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition: 600ms ease-out;
+        transition: 600ms ease-out;
+      }
+      .link-project:hover:before {
+        -webkit-transform: scale(2);
+        transform: scale(2);
       }
 
+      .square {
+        height: 420px;
+        width: 420px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+      .bg-color-main {
+        background-color: #000000;
+      }
+      .bg-color-1 {
+        background-color: #2d5f5d;
+      }
+      .bg-color-2 {
+        background-color: #004e5a;
+      }
+      .bg-color-navy {
+        background-color: #022140 ;
+      }
+      .ripple-hover {
+        float: left;
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+      }
+      .below {
+        float: left;
+        width: 100%;
+        position: relative;
+        z-index: 999;
+      }
+      .project-img {
+        display: block;
+        margin-top: 40px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      .link-project a {
+        display: block;
+        margin-top: 10px;
+        margin-left: 10px;
+        color: White !important;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .box-shadow {
+        box-shadow: 0px 0px 5px grey;
+      }
+      .projects-section{
+        width: 100;
+      }
+      .column{
+          float:left;
+          width: 50%;
+          padding: 10px;
+      }
+      .row::after{
+          content: "";
+          display: table;
+          clear:both;
+      }
+      .resume-header{
+        color: seagreen;
+          padding: 20px;
+          font-size: 26px;
+          font-family: TitilliumWeb-SemiBold; 
+      }
+      h3.hidden{
+          visibility: hidden;
+      }
+      h4{
+          font-family: TitilliumWeb-SemiBold;
+          font-size: 20px;
+      }
+      h5{
+          font-family: TitilliumWeb-SemiBold;
+          font-size: 18px;
+      }
       .cop {
         margin: auto;
         text-align: center;
         width: 50%;
         padding: 10px;
       }
-      .container {
-        position: relative;
-        top: 50px;
-        width: 50%;
-      }
-
-      .image {
-        display: block;
-        width: 70%;
-        height: auto;
-      }
-
-      .overlay {
-        position: absolute;
-        bottom: 0;
-        left: 70%;
-        right: 0;
-        background-color: seagreen;
-        overflow: hidden;
-        width: 0;
-        height: 100%;
-        transition: 0.5s ease;
-      }
-
-      .container:hover .overlay {
-        width: 70%;
-        left: 0;
-      }
-
-      .text {
-        white-space: nowrap;
-        color: white;
-        font-size: 20px;
-        position: absolute;
-        overflow: hidden;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-      }
-      div {
-        margin-left: 1%;
-        margin-right: 1%;
-      }
-
-      .div1 {
-        position: absolute;
-        width: 350px;
-        height: 230px;
-        border: 2px solid grey;
-        top: 30px;
-        left: 30px;
-        z-index: -10;
-      }
-      .center {
-        display: flex;
-        align-items: center;
-        height: 432px;
-        padding-left: 50px;
-      }
-      img {
-        margin-top: 0;
-        margin-bottom: 0;
-      }
-      h1 {
-        text-align: center;
-        color: #6dbc9c;
-        font-size: 60px;
-        font-family: serif;
-        margin: 24px;
-      }
-      h2 {
-        text-align: center;
-        color: #11524c;
-        font-size: 32px;
-        font-family: serif;
-        margin-bottom: 0px;
-      }
-      section {
-        margin-left: 10%;
-        margin-right: 10%;
-        align-items: center;
-      }
-      figure {
-        position: relative;
-        float: left;
-        margin: 0 3rem 1rem 0;
-      }
-      .imgorlando {
-        vertical-align: bottom;
-      }
-      figure:after {
-        content: "";
-        position: absolute;
-        left: 1.5rem;
-        bottom: 1.5rem;
-        border: 2px solid #222629;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-      }
-      p {
-        font-size: 16px;
-        color: black;
-        font-weight: bold;
-      }
-      .cbox {
-        margin-top: 100px;
-        width: auto;
-        height: 500px;
-        background-color: #6dbc9c;
+      .img-background-abstract{
+          background-image: url("images/abstract-6144321.jpg");
       }
     </style>
   </head>
   <body>
-    <ul>
-      <div>
+    <div>
+      <ul>
         <li>
-          <a href="mailto:orlandomoyarodriguez@gmail.com" class="links">
-            contact
-          </a>
-        </li>
-        <li>
-          <a href="Documents/mostRecent-1.docx" download class="links"
-            >resume</a
+          <a href="mailto:orlandomoyarodriguez@gmail.com" class="links"
+            >contact</a
           >
         </li>
+        <li><a href="documents/mostRecent-1.docx" class="links">resume</a></li>
+        <li><a href="https://github.com/OrMoya" class="links">github</a></li>
         <li>
-          <a href="https://github.com/OrMoya" target="_blank" class="links"
-            >github</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/orlandomoya/"
-            target="_blank"
-            class="links"
+          <a href="https://www.linkedin.com/in/orlandomoya/" class="links"
             >linkedin</a
           >
         </li>
         <li style="float: left">
-          <a href="http://orlandomoya.com"> orlando moya</a>
+          <a href="http:\\orlandomoya.com">orlando moya</a>
         </li>
-      </div>
-    </ul>
-    <img src="images/leaves.jpg" alt="" />
-    <section>
-      <h2>Biography</h2>
-      <h1>Orlando Moya</h1>
-      <figure>
-        <img
-          src="images/me.jpg"
-          alt="Picture of Orlando Moya"
-          class="imgorlando"
-        />
-      </figure>
-      <div class="center">
-        <p>
-          I graduated from California Polytechnic State University Pomona with a
-          bachelor of science in computer engineering. While at the University,
-          I was a member of the CPP Robotic Club and served as the 2019 - 2020
-          requsitions officer. My responisibities included helping organize
-          workshops, and maintaining club materials and inventory. <br />
-          <br />
-
-          During my time at University, I developed various skills such as C++,
-          Java, OOP, HTML, CSS, Fusion 360. My interest include 3D printing,
-          Microcontrollers, Hiking, Basketball, and Video Games.
-        </p>
-      </div>
-    </section>
-    <p class="cbox"></p>
-    <div style="margin: auto; text-align: center">
-      Leaves Image by
-      <a
-        href="https://pixabay.com/users/kollsd-14736411/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5610361"
-        >Dung Tran</a
-      >
-      from
-      <a
-        href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5610361"
-        >Pixabay</a
-      >
+      </ul>
     </div>
-    <p class="cop">&copy Copyright 2021 Orlando Moya. All rights reserved.</p>
+    <div class="img-background-abstract center-text center-text-vertically" style="height: 800px";>
+    <p class="page" style="font-size: 32px; color: white;">Welcome to my website! I only just started this so you might encounter some problems. Thank you for visiting.</p></div>
+    <div class="" style="margin: 0; padding: 0;">
+    <div class="page center">
+      <section style="padding-bottom: 40px;">
+        <p class="bio">
+            <h1 class="center-text heading-font">about me</h1>
+            <hr style="color: lightgrey;">
+            <div class="bio-text" style="padding-top: 20px;">
+          <img src="images/me.jpg" alt="" class="img-orlando" />
+          Orlando Moya graduated from California State Polytechnic University,
+          Pomona with a Bachelor of Science in Computer Engineering.
+          <br /><br />
+          He served CPP Robotic’s Club as the requisitions officer during the
+          2019-2020 academic year. He served CPP Robotic’s Club as the requisitions officer during the
+          2019-2020 academic year. As an upperclassman, he helped organized
+          workshops and creative engineering projects with fellow students.
+          Additionally, he was responsible for storing and cataloging materials
+          belonging to the club. <br><br>
+          Along with these duties, he collaborated with fellow club members on
+          several projects: the Hotdog Bot (an engineering exercise with the
+          intent to practice and implement several automation concepts), and the
+          Soccer Bot, which was tested against other bots in a fun and fierce
+          competition held at the school.
+          <br /><br />
+          During his time at CPP and afterward, he has developed various skill
+          in programming, which currently include: C++, Java, OOP, HTML, CSS,
+          ROS, Fusion 360.
+          <br /><br />
+          Some of his interests and hobbies are 3D printing, DIY engineering
+          projects, reading, basketball, and video games.
+        </p>
+      </section>
+    </div>
+    </div>
+    <section class="pbox">
+        <div class="page center">
+        <div class="row">
+            <div class="column bio-text">
+                <h3 class="center-text resume-header ">Education</h3>
+                <h4>California State Polytechnic University, Pomona</h4> <p> 2011-2021</p>
+            </div>
+            <div class="column bio-text">
+                <h3 class="center-text resume-header hidden">Hidden</h3>
+                <h5>Bachelor of Science, Computer Engineering</h5>  <p>The courses I took include C for Engineers, Object-Oriented Programming, Data Structures, App Development with JAVA, Software Engineering.  </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column bio-text">
+                <h3 class="center-text resume-header ">Work Experience</h3>
+                <h4>Bargain Book World</h4> <p> March 2021 - September 2021</p>
+                <br><br>
+                <h4>Chevron</h4> <p> September 2016 - September 2017</p>
+            </div>
+            <div class="column bio-text">
+                <h3 class="center-text resume-header hidden">Hidden</h3>
+                <h5>Cashier, Keyholder</h5>  <p>Helped customers find books based on interests. Worked in a team to ensure store cleanliness and organization. </p><br>
+                <h5>Customer Service Representative</h5>  <p>Provided excellent customer service while executing transactions in a stressful and fast paced environment.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column bio-text">
+                <h3 class="center-text resume-header ">Club Experience</h3>
+                <h4>Cal Poly Pomona Robotics Club</h4> <p> March 2019 - May 2020</p>
+            </div>
+            <div class="column bio-text">
+                <h3 class="center-text resume-header hidden">Hidden</h3>
+                <h5>Requisitions Officer</h5>  <p>Catologed club materials. Requisitioned materials based on club demands. Assisted in organizing club workshops and events.</p>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section class="">
+        <div class="page">
+        <h2 class="center-text heading-font">my projects</h2>
+        <div class="center2">
+        <div class="ripple-hover bg-color-2 square box-shadow">
+          <div class="below">
+            <div class="link-project">
+              <a href="images/CARTMaN.png" class="radial-out square-links"
+                >CARTMaN
+                <div class="img-  wrap">
+                  <img
+                    src="images/CARTMaN.png"
+                    alt="CAD Model"
+                    class="project-img"
+                  /></div
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="ripple-hover bg-color-2 square box-shadow">
+          <div class="below">
+            <div class="link-project">
+              <a href="images/Discord-Logo-Color.png" class="radial-out square-links"
+                >Discord Bot
+                <div class="img-wrap">
+                  <img
+                    src="images/Discord-Logo-Color.png"
+                    alt="CAD Model"
+                    class="project-img"
+                  /></div
+              ></a>
+            </div>
+          </div>
+        </div>
+        <!--<div class="ripple-hover bg-color-2 square box-shadow">
+          <div class="below">
+            <div class="link-project">
+              <a href="images/CARTMaN.png" class="radial-out"
+                >CARTMan
+                <div class="img-wrap">
+                  <img
+                    src="images/CARTMaN.png"
+                    alt="CAD Model"
+                    class="project-img"
+                  /></div
+              ></a>
+            </div>
+          </div>
+        </div>
+        </div>-->
+    </div>
+      </section class="projects-section">
+      Image by <a href="https://pixabay.com/users/manuchi-1728328/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6144321">Денис Марчук</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6144321">Pixabay</a>
+      <p class="cop">&copy Copyright 2021 Orlando Moya. All rights reserved.</p>
   </body>
 </html>
